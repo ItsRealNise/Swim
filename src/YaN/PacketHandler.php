@@ -14,8 +14,7 @@ use pocketmine\plugin\Plugin;
 
 class PacketHandler implements Listener {
 
-	/** @var Plugin */
-	public $plugin;
+	public Plugin $plugin;
 
 	public function __construct(Plugin $plugin){
 		$this->plugin = $plugin;
