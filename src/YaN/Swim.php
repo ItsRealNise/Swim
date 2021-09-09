@@ -9,8 +9,8 @@ class Swim extends PluginBase {
 
 	/** @var Session[] */
 	private $sessions = [];
-	/** @var Swim */
-	private static $instance;
+	
+	private static Swim $instance;
 
 	public function onEnable(){
 	    self::$instance = $this;
