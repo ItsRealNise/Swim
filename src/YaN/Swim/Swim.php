@@ -1,6 +1,6 @@
 <?php
 
-namespace YaN;
+namespace YaN\Swim;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\Player;
@@ -14,8 +14,7 @@ class Swim extends PluginBase {
 
 	public function onEnable(){
 	    self::$instance = $this;
-		$this->getLogger()->info("Enable swim");
-		$this->getServer()->getPluginManager()->registerEvents(new PacketHandler($this), $this);
+            $this->getServer()->getPluginManager()->registerEvents(new PacketHandler($this), $this);
 	}
 
 	public static function getInstance(): Swim{
