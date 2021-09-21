@@ -1,2 +1,2 @@
-# Swim
-Working Swimming Pocketmine
+# General
+Simple Plugin, For work swim in water
