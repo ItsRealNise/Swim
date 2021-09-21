@@ -1,7 +1,8 @@
 name: Swim
 api: 3.0.0
 version: 0.0.1
-mcpe-protocol: 448
-author: YaN
-main: YaN\swim\Swim
-description: Make Player Can Swin In Water
+mcpe-protocol: 
+ - 448
+author: ItsRealNise
+main: ItsRealNise\Swim\Swim
+description: Simple Plugin, For work swim in water

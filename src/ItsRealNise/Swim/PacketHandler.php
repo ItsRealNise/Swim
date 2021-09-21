@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-namespace YaN\swim;
+namespace ItsRealNise\Swim;
 
 use pocketmine\event\{
 	Listener, server\DataPacketReceiveEvent, server\DataPacketSendEvent
@@ -10,13 +10,14 @@ use pocketmine\network\mcpe\protocol\{
 	PlayerActionPacket, StartGamePacket
 };
 use pocketmine\Player as PMPlayer;
-use pocketmine\plugin\Plugin;
+use ItsRealNise\Swim\Swim;
 
 class PacketHandler implements Listener {
 
-	public Plugin $plugin;
+	/** @var Swim $plugin */
+	private $plugin;
 
-	public function __construct(Plugin $plugin){
+	public function __construct(Swim $plugin){
 		$this->plugin = $plugin;
 	}
 
@@ -28,10 +29,9 @@ class PacketHandler implements Listener {
 	public function onPacketReceive(DataPacketReceiveEvent $ev){
 		$pk = $ev->getPacket();
 		$p = $ev->getPlayer();
-
 		switch(true){
 			case ($pk instanceof PlayerActionPacket):
-				$session = Swim::getInstance()->getSessionById($p->getId());
+				$session = $this->plugin->getSessionById($p->getId());
 					switch($pk->action){
 						case PlayerActionPacket::ACTION_START_SWIMMING:
 							$p->setGenericFlag(PMPlayer::DATA_FLAG_SWIMMING, true);

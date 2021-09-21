@@ -1,20 +1,20 @@
 <?php
 
-namespace YaN\swim;
+namespace ItsRealNise\Swim;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\Player;
 
 class Swim extends PluginBase {
 
-	/** @var Session[] */
+	/** @var Swim $instance */
+    private static $instance;
+
 	private $sessions = [];
-	
-	private static Swim $instance;
 
 	public function onEnable(){
 	    self::$instance = $this;
-            $this->getServer()->getPluginManager()->registerEvents(new PacketHandler($this), $this);
+        $this->getServer()->getPluginManager()->registerEvents(new PacketHandler($this), $this);
 	}
 
 	public static function getInstance(): Swim{
