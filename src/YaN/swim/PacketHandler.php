@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-namespace YaN;
+namespace YaN\swim;
 
 use pocketmine\event\{
 	Listener, server\DataPacketReceiveEvent, server\DataPacketSendEvent
