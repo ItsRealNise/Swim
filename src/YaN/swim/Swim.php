@@ -1,6 +1,6 @@
 <?php
 
-namespace YaN\Swim;
+namespace YaN\swim;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\Player;
