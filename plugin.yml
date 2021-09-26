@@ -2,7 +2,7 @@ name: Swim
 api: 3.0.0
 version: 0.0.1
 mcpe-protocol: 
- - 448
+ - 465
 author: ItsRealNise
 main: ItsRealNise\Swim\Swim
 description: Simple Plugin, For work swim in water
